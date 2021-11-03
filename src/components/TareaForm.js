@@ -21,9 +21,24 @@ const TareaForm = (props) => {
             setValidacion(false);
         }
     }
+    // const buscar = (event) => {
+    //     event.preventDefault();
+    //     if (inputText.trim() !== "") {
+    //         props.nuevaTarea(inputText);
+    //         setInputText("");
+    //         setValidacion(true);
+    //     } else {
+    //         //setValidacion(false);
+    //     }
+    // }
 
     return (
         <div>
+            <form action="form-busqueda" className="form-busqueda">
+                <label>Busqueda: </label>
+                <input type="text" placeholder="Buscar Tarea"></input>
+                <button>🔍</button>
+            </form>
             <form action="form" className="form" onSubmit={enviar}>
                 <label>Tarea: </label>
                 <input type="text" placeholder="Nueva Tarea" value={inputText} onChange={manejarFormulario}></input>
