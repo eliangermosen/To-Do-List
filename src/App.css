@@ -1,4 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dededf;
+  font-family: "Open Sans", sans-serif;
+}
+
 .form {
+  width: 80%;
+  margin: 60px auto 0;
+  background: #f3f3f3;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.lista,
+.form-editar {
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.App {
+  background-color: #dededf;
+  position: relative;
+  bottom: 100%;
+}
+
+.form span {
+  font-size: 25x;
+  margin-right: 20px;
+}
+
+.form input {
+  margin-right: 30px;
+}
+
+.form-busqueda {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #438de8;
+  padding: 15px;
+  color: white;
+}
+
+.form button {
+  border: none;
+  border-radius: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgb(74, 212, 74);
+  color: white;
+}
+
+.form-busqueda button {
+  border: none;
+  border-radius: 5px;
+  margin-left: 2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgb(75, 75, 75);
+  color: white;
+}
+
+.validacion {
+  width: 80%;
+  color: red;
+  margin: 0 auto;
+}
+
+.lista {
+  width: 80%;
+  margin: 50px auto 0;
+}
+
+.tarea {
+  font-size: 20px;
+  margin: 5px 0 5px 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+input {
+  padding: 6px;
+  border-radius: 3px;
+  border: 0;
+}
+
+.spn-editar,
+.spn-borrar {
+  cursor: pointer;
+}
+
+/* .form {
   width: 80%;
   margin: 60px auto 0;
 }
@@ -42,4 +148,4 @@
 .spn-editar,
 .spn-borrar {
   cursor: pointer;
-}
+} */

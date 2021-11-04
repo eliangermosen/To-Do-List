@@ -31,7 +31,7 @@ const Tarea = (props) => {
     };
 
     return (
-    <div>
+    <div className="contenedor">
         {
             !edit ? 
             <div className="tarea">

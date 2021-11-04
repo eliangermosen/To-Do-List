@@ -41,7 +41,7 @@ const TareaForm = (props) => {
             </form>
             <form action="form" className="form" onSubmit={enviar}>
                 <label>Tarea: </label>
-                <input type="text" placeholder="Nueva Tarea" value={inputText} onChange={manejarFormulario}></input>
+                <input type="text" placeholder="Escriba una nueva tarea" value={inputText} onChange={manejarFormulario}></input>
                 <button>➕</button>
             </form>
             {
