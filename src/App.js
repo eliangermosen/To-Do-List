@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import TareaForm from './components/TareaForm';
 import Tarea from './components/Tarea';
+import Swal from 'sweetalert2'
 import './App.css';
 
 const key = 'todoApp.listaTareas';
@@ -23,15 +24,39 @@ function App() {
 
   const nuevaTarea = (tarea) => {
     setListaTareas([tarea, ...listaTareas]);
-  };
+    Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'Su tarea ha sido guardada!',
+    showConfirmButton: false,
+    timer: 1000
+  })
+};
 
   const buscarTarea = (tarea) => {
     setListaTareas([tarea, ...listaTareas]);
   };
 
   const borrar = (id) => {
-    const listaFiltrada = listaTareas.filter((e, index) => index !== id);
-    setListaTareas(listaFiltrada);
+    Swal.fire({
+      title: 'Esta seguro que desea eliminarla?',
+      text: "Si elimina la tarea no podra revertir los cambios!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminala!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const listaFiltrada = listaTareas.filter((e, index) => index !== id);
+        setListaTareas(listaFiltrada);
+        Swal.fire(
+        'Eliminada!',
+        'Su tarea ha sido eliminada!',
+        'success'
+        )
+      }
+    })
   };
 
   const actualizarTarea = (id, tarea) => {
